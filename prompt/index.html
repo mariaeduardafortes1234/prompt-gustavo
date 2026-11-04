@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Eduarda ✦ Portfólio &amp; Desenvolvimento Web</title>
+  <meta name="description"
+    content="Portfólio de Maria Eduarda - Estudante do curso técnico de Informática no Instituto Educacional Raphael Di Santo em Campinas. Desenvolvimento web com sensibilidade, código limpo e design moderno.">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Folha de Estilos Principal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Canvas Interativo para Pétalas Florais Delicadas -->
+  <canvas id="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- Cursor Personalizado Delicado (apenas em telas com mouse) -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-follower" id="custom-cursor-follower" aria-hidden="true"></div>
+
+  <!-- ==============================================
+       BARRA DE NAVEGAÇÃO FIXA (NAVBAR)
+       ============================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#inicio" class="nav-logo" aria-label="Página inicial de Maria Eduarda">
+        <span class="logo-mark">
+          <img src="img/perfil.jpg" alt="Foto de Maria Eduarda" class="logo-avatar-img">
+        </span>
+        <span class="logo-text">Maria Eduarda</span>
+        <span class="logo-flower" aria-hidden="true">🌸</span>
+      </a>
+
+      <!-- Status Pill Moderno -->
+      <div class="nav-status-badge">
+        <span class="status-dot"></span>
+        <span class="status-text">Estudante &amp; Dev • Campinas</span>
+      </div>
+
+      <!-- Links de Navegação Desktop -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#sobre" class="nav-link">Sobre Mim</a>
+        <a href="#habilidades" class="nav-link">Habilidades</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#contato" class="nav-link nav-btn-cta">
+          <span>Contato</span>
+          <svg class="cta-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+      </nav>
+
+      <!-- Botão Hamburger Mobile -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Gaveta do Menu Mobile -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="drawer-header">
+        <span class="drawer-title">Maria Eduarda 🌸</span>
+        <button class="drawer-close" id="drawer-close" aria-label="Fechar menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="#inicio" class="drawer-link">Início</a>
+        <a href="#sobre" class="drawer-link">Sobre Mim</a>
+        <a href="#habilidades" class="drawer-link">Habilidades</a>
+        <a href="#projetos" class="drawer-link">Projetos</a>
+        <a href="#contato" class="drawer-link drawer-cta">Entrar em Contato ✦</a>
+      </nav>
+      <div class="drawer-footer">
+        <p>16 anos • Campinas, SP</p>
+        <p class="drawer-school">Instituto Educacional Raphael Di Santo</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==============================================
+         SEÇÃO 1: INÍCIO (HERO)
+         ============================================== -->
+    <section class="hero-section" id="inicio">
+      <!-- Elementos Decorativos de Fundo -->
+      <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+      <img src="img/floral-motif.svg" alt="" class="hero-floral hero-floral-right" aria-hidden="true">
+
+      <div class="container hero-container">
+
+        <!-- Conteúdo Textual do Hero -->
+        <div class="hero-content">
+          <!-- Tag de Abertura / Boas-vindas -->
+          <div class="badge-pill hero-badge reveal">
+            <span class="badge-sparkle">✦</span>
+            <span>Olá, seja muito bem-vindo(a)!</span>
+          </div>
+
+          <!-- Nome em Grande Destaque -->
+          <h1 class="hero-name reveal" data-delay="100">
+            Maria Eduarda
+            <span class="name-floral-icon">
+              <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" fill="#FFE5EC" />
+                <path d="M20 8C16 14 24 14 20 8Z" fill="#FB6F92" />
+                <path d="M20 32C16 26 24 26 20 32Z" fill="#FB6F92" />
+                <path d="M8 20C14 16 14 24 8 20Z" fill="#FB6F92" />
+                <path d="M32 20C26 16 26 24 32 20Z" fill="#FB6F92" />
+                <circle cx="20" cy="20" r="4.5" fill="#FFF0F3" stroke="#FB6F92" stroke-width="1.5" />
+              </svg>
+            </span>
+          </h1>
+
+          <!-- Frase de Apresentação Impactante -->
+          <p class="hero-title reveal" data-delay="200">
+            Transformando ideias em interfaces através de <span class="text-serif">código, design</span> &amp; <span
+              class="highlight-rose">sensibilidade.</span>
+          </p>
+
+          <!-- Descrição Pessoal -->
+          <p class="hero-description reveal" data-delay="300">
+            Tenho 16 anos, sou de Campinas e curso Informática no <strong>Instituto Educacional Raphael Di
+              Santo</strong>. Crio experiências digitais que combinam lógica estruturada, estética delicada e foco nos
+            detalhes.
+          </p>
+
+          <!-- Badges Flutuantes Interativos (estilo Landonorris & Igloo) -->
+          <div class="hero-tags-row reveal" data-delay="400">
+            <div class="floating-tag">
+              <span class="tag-icon">📍</span>
+              <span>Campinas, SP</span>
+            </div>
+            <div class="floating-tag">
+              <span class="tag-icon">🎓</span>
+              <span>Técnico em Informática</span>
+            </div>
+            <div class="floating-tag">
+              <span class="tag-icon">💻</span>
+              <span>Frontend &amp; Web</span>
+            </div>
+          </div>
+
+          <!-- Botões de Ação (CTAs) -->
+          <div class="hero-cta-group reveal" data-delay="500">
+            <a href="#projetos" class="btn btn-primary magnetic-btn">
+              <span>Conhecer Meus Projetos</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#sobre" class="btn btn-secondary">
+              <span>Sobre Minha Trajetória</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cartão Visual Hero / Mockup Interativo -->
+        <div class="hero-visual reveal" data-delay="250">
+          <div class="hero-card-composition">
+
+            <!-- Card Principal com Efeito Glassmorphism & Código -->
+            <div class="hero-glass-card">
+              <div class="card-glass-header">
+                <div class="window-dots">
+                  <span class="dot dot-rose-1"></span>
+                  <span class="dot dot-rose-2"></span>
+                  <span class="dot dot-rose-3"></span>
+                </div>
+                <div class="window-title">
+                  <span class="code-bracket">&lt;</span>maria-eduarda.dev<span class="code-bracket">&gt;</span>
+                </div>
+                <span class="window-badge">v1.0 🌸</span>
+              </div>
+
+              <div class="card-glass-body">
+                <div class="code-line"><span class="code-keyword">const</span> <span class="code-var">estudante</span> =
+                  {</div>
+                <div class="code-line indent-1"><span class="code-prop">nome</span>: <span class="code-string">"Maria
+                    Eduarda"</span>,</div>
+                <div class="code-line indent-1"><span class="code-prop">idade</span>: <span
+                    class="code-number">16</span>,</div>
+                <div class="code-line indent-1"><span class="code-prop">cidade</span>: <span
+                    class="code-string">"Campinas - SP"</span>,</div>
+                <div class="code-line indent-1"><span class="code-prop">colegio</span>: <span
+                    class="code-string">"Raphael Di Santo"</span>,</div>
+                <div class="code-line indent-1"><span class="code-prop">paixoes</span>: [<span
+                    class="code-string">"Desenvolvimento Web"</span>, <span class="code-string">"Design UI"</span>],
+                </div>
+                <div class="code-line indent-1"><span class="code-prop">status</span>: <span
+                    class="code-string">"Construindo o futuro com amor 💖"</span></div>
+                <div class="code-line">};</div>
+              </div>
+
+              <!-- Mini Footer do Card com Horário em Campinas -->
+              <div class="card-glass-footer">
+                <div class="footer-time-chip">
+                  <span class="live-dot"></span>
+                  <span id="campinas-clock">Campinas, SP • Horário de Brasília</span>
+                </div>
+                <span class="footer-mood">Foco &amp; Criação ✨</span>
+              </div>
+            </div>
+
+            <!-- Card Flutuante 1: Instituto Raphael Di Santo -->
+            <div class="floating-sticker sticker-school">
+              <div class="sticker-icon">🎓</div>
+              <div class="sticker-text">
+                <strong>Raphael Di Santo</strong>
+                <span>Técnico em Informática</span>
+              </div>
+            </div>
+
+            <!-- Card Flutuante 2: Amor pelo Código -->
+            <div class="floating-sticker sticker-tech">
+              <div class="sticker-icon">🌸</div>
+              <div class="sticker-text">
+                <strong>Clean &amp; Creative Code</strong>
+                <span>HTML • CSS • JavaScript</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Indicador de Rolagem Suave -->
+      <a href="#sobre" class="scroll-indicator" aria-label="Rolar para a seção Sobre Mim">
+        <span class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </span>
+        <span class="scroll-text">Descubra mais</span>
+      </a>
+    </section>
+
+    <!-- ==============================================
+         SEÇÃO 2: SOBRE MIM
+         ============================================== -->
+    <section class="section about-section" id="sobre">
+      <div class="container">
+
+        <!-- Cabeçalho da Seção -->
+        <div class="section-header reveal">
+          <div class="badge-pill">
+            <span class="badge-sparkle">✦</span>
+            <span>Minha História</span>
+          </div>
+          <h2 class="section-title">
+            Conheça um pouco <span class="text-serif">sobre mim</span>
+          </h2>
+          <p class="section-subtitle">
+            A união entre a curiosidade de aprender programação e a dedicação para transformar código em experiências
+            reais.
+          </p>
+        </div>
+
+        <!-- Conteúdo em Duas Colunas -->
+        <div class="about-grid">
+
+          <!-- Coluna 1: Espaço para Foto / Cartão de Identidade -->
+          <div class="about-photo-wrapper reveal" data-delay="100">
+            <div class="photo-card-container">
+
+              <!-- Selo Decorativo Giratório -->
+              <div class="rotating-badge-container">
+                <div class="rotating-badge-text">
+                  <svg viewBox="0 0 100 100" class="rotating-svg">
+                    <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                    <text font-size="10.8" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600"
+                      fill="#FB6F92" letter-spacing="2">
+                      <textPath xlink:href="#circlePath">
+                        MARIA EDUARDA ✦ TECNOLOGIA ✦
+                      </textPath>
+                    </text>
+                  </svg>
+                  <div class="rotating-badge-center">🌸</div>
+                </div>
+              </div>
+
+              <!-- Moldura Delicada com a Fotografia -->
+              <div class="photo-frame">
+                <img src="img/perfil.jpg" alt="Foto de perfil de Maria Eduarda" class="about-photo"
+                  id="profile-photo">
+
+                <div class="photo-overlay-tag">
+                  <span class="photo-tag-title">Maria Eduarda</span>
+                  <span class="photo-tag-sub">16 anos • Campinas, SP</span>
+                </div>
+              </div>
+
+              <!-- Destaque Profissional Delicado -->
+              <div class="photo-caption-note">
+                <span class="note-icon">✨</span>
+                <span><strong>Desenvolvedora em Formação</strong> • Instituto Educacional Raphael Di Santo</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Coluna 2: Narrativa da Trajetória & Bento Cards -->
+          <div class="about-narrative reveal" data-delay="200">
+
+            <div class="narrative-card">
+              <h3 class="narrative-heading">
+                Estudante de Informática apaixonada por criar 🌸
+              </h3>
+              <p class="narrative-text">
+                Meu nome é <strong>Maria Eduarda</strong>, tenho 16 anos e moro em <strong>Campinas (SP)</strong>.
+                Atualmente, estou cursando o ensino técnico de <strong>Informática no Instituto Educacional Raphael Di
+                  Santo</strong>, onde tenho consolidado minha base em lógica de programação, arquitetura de sistemas e
+                novas tecnologias.
+              </p>
+              <p class="narrative-text">
+                Desde meus primeiros passos com computação, o que mais me fascinou foi a capacidade de dar vida a
+                interfaces visuais através da escrita de código. Para mim, a programação web é a união perfeita entre
+                <strong>pensamento analítico</strong> e <strong>expressão criativa</strong>.
+              </p>
+              <p class="narrative-text">
+                Busco me aprofundar constantemente em HTML, CSS e JavaScript, explorando como micro-interações,
+                tipografia elegante e responsividade podem transformar a experiência de quem navega.
+              </p>
+            </div>
+
+            <!-- Bento Mini Cards com Fatos Principais -->
+            <div class="about-bento-grid">
+
+              <div class="bento-card">
+                <div class="bento-icon-wrapper">
+                  <span class="bento-emoji">🏫</span>
+                </div>
+                <div class="bento-details">
+                  <span class="bento-label">Instituição</span>
+                  <strong class="bento-value">Raphael Di Santo</strong>
+                  <span class="bento-sub">Campinas - SP</span>
+                </div>
+              </div>
+
+              <div class="bento-card">
+                <div class="bento-icon-wrapper">
+                  <span class="bento-emoji">💻</span>
+                </div>
+                <div class="bento-details">
+                  <span class="bento-label">Formação</span>
+                  <strong class="bento-value">Curso Técnico</strong>
+                  <span class="bento-sub">Informática</span>
+                </div>
+              </div>
+
+              <div class="bento-card">
+                <div class="bento-icon-wrapper">
+                  <span class="bento-emoji">🎨</span>
+                </div>
+                <div class="bento-details">
+                  <span class="bento-label">Foco Atual</span>
+                  <strong class="bento-value">Web &amp; Frontend</strong>
+                  <span class="bento-sub">Design de Interfaces</span>
+                </div>
+              </div>
+
+              <div class="bento-card">
+                <div class="bento-icon-wrapper">
+                  <span class="bento-emoji">✨</span>
+                </div>
+                <div class="bento-details">
+                  <span class="bento-label">Objetivo</span>
+                  <strong class="bento-value">Evolução &amp; Prática</strong>
+                  <span class="bento-sub">Estágios e Projetos</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SEÇÃO 3: HABILIDADES & TECNOLOGIAS
+         ============================================== -->
+    <section class="section skills-section" id="habilidades">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="badge-pill">
+            <span class="badge-sparkle">✦</span>
+            <span>Conhecimentos</span>
+          </div>
+          <h2 class="section-title">
+            Tecnologias &amp; <span class="text-serif">Competências</span>
+          </h2>
+          <p class="section-subtitle">
+            Ferramentas e fundamentos que estudo e aplico no desenvolvimento de projetos modernos.
+          </p>
+        </div>
+
+        <!-- Grade de Cartões de Habilidades -->
+        <div class="skills-grid">
+
+          <div class="skill-card reveal" data-delay="100">
+            <div class="skill-header">
+              <div class="skill-icon-bubble">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FB6F92" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="skill-badge">Base Web</span>
+            </div>
+            <h3 class="skill-name">HTML5 Semântico</h3>
+            <p class="skill-desc">Estruturação limpa de páginas, acessibilidade, boas práticas de SEO e marcação
+              semântica orientada ao conteúdo.</p>
+          </div>
+
+          <div class="skill-card reveal" data-delay="150">
+            <div class="skill-header">
+              <div class="skill-icon-bubble">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FB6F92" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+              </div>
+              <span class="skill-badge">Estilização</span>
+            </div>
+            <h3 class="skill-name">CSS3 &amp; Animações</h3>
+            <p class="skill-desc">Flexbox, CSS Grid, variáveis nativas, micro-interações fluidas, transições e paletas
+              de cores refinadas.</p>
+          </div>
+
+          <div class="skill-card reveal" data-delay="200">
+            <div class="skill-header">
+              <div class="skill-icon-bubble">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FB6F92" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+              </div>
+              <span class="skill-badge">Lógica &amp; DOM</span>
+            </div>
+            <h3 class="skill-name">JavaScript Moderno</h3>
+            <p class="skill-desc">Manipulação do DOM, eventos interativos, funções assíncronas, canvas e lógica para
+              criar páginas dinâmicas.</p>
+          </div>
+
+          <div class="skill-card reveal" data-delay="250">
+            <div class="skill-header">
+              <div class="skill-icon-bubble">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FB6F92" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span class="skill-badge">Mobile First</span>
+            </div>
+            <h3 class="skill-name">Design Responsivo</h3>
+            <p class="skill-desc">Adaptação perfeita para smartphones, tablets e computadores de alta resolução,
+              garantindo excelente usabilidade.</p>
+          </div>
+
+          <div class="skill-card reveal" data-delay="300">
+            <div class="skill-header">
+              <div class="skill-icon-bubble">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FB6F92" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="18" r="3"></circle>
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="18" cy="6" r="3"></circle>
+                  <path d="M18 9v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9"></path>
+                  <path d="M12 12v3"></path>
+                </svg>
+              </div>
+              <span class="skill-badge">Controle</span>
+            </div>
+            <h3 class="skill-name">Git &amp; GitHub</h3>
+            <p class="skill-desc">Controle de versão de código, histórico de commits, organização de repositórios e
+              publicação de projetos web.</p>
+          </div>
+
+          <div class="skill-card reveal" data-delay="350">
+            <div class="skill-header">
+              <div class="skill-icon-bubble">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FB6F92" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                  </path>
+                </svg>
+              </div>
+              <span class="skill-badge">Sensibilidade</span>
+            </div>
+            <h3 class="skill-name">UI / UX &amp; Estética</h3>
+            <p class="skill-desc">Atenção a harmonia de cores, hierarquia tipográfica, espaços em branco e experiência
+              visual delicada e acolhedora.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SEÇÃO 4: PROJETOS
+         ============================================== -->
+    <section class="section projects-section" id="projetos">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="badge-pill">
+            <span class="badge-sparkle">✦</span>
+            <span>Galeria de Criações</span>
+          </div>
+          <h2 class="section-title">
+            Meus <span class="text-serif">Projetos</span>
+          </h2>
+          <p class="section-subtitle">
+            Conheça meus projetos desenvolvidos no curso técnico de Informática e repositórios autorais no GitHub.
+          </p>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+
+          <!-- PROJETO 1: Skins -->
+          <article class="project-card reveal" data-delay="100">
+            <div class="project-image-box">
+              <img src="img/project-skins.svg" alt="Prévia visual do Projeto Skins"
+                class="project-thumb" loading="lazy">
+              <div class="project-overlay-badge">
+                <span class="badge-dot dot-pink"></span>
+                <span>Repositório GitHub 🎮</span>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <div class="project-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Catálogo Web</span>
+              </div>
+
+              <h3 class="project-title">Skins</h3>
+
+              <p class="project-description">
+                Plataforma web para catálogo e exibição de skins e itens cosméticos de jogos, desenvolvida com design moderno, interface responsiva e foco na experiência do usuário.
+              </p>
+
+              <div class="project-footer-actions">
+                <a href="https://github.com/dudafortesb/skins-web" target="_blank" rel="noopener noreferrer" class="btn btn-card-primary">
+                  <svg class="github-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>Visualizar projeto</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <span class="project-status-note">dudafortesb ✦</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 2: GLPI Maria Eduarda -->
+          <article class="project-card reveal" data-delay="200">
+            <div class="project-image-box">
+              <img src="img/project-glpi.svg" alt="Prévia visual do Projeto GLPI Maria Eduarda"
+                class="project-thumb" loading="lazy">
+              <div class="project-overlay-badge badge-wip">
+                <span class="badge-dot dot-yellow"></span>
+                <span>Curso Técnico • 1ºC Raphael</span>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <div class="project-tags">
+                <span class="tech-tag">Gestão de TI</span>
+                <span class="tech-tag">GLPI</span>
+                <span class="tech-tag">Service Desk</span>
+                <span class="tech-tag">Suporte</span>
+              </div>
+
+              <h3 class="project-title">GLPI Maria Eduarda</h3>
+
+              <p class="project-description">
+                Implementação e gerenciamento do sistema open-source GLPI para controle de chamados técnicos, help desk e inventário de ativos de TI da turma 1º C no Instituto Educacional Raphael Di Santo.
+              </p>
+
+              <div class="project-footer-actions">
+                <a href="https://github.com/mariaeduardafortes1234/GLPI-MARIA-EDUARDA-1C" target="_blank" rel="noopener noreferrer" class="btn btn-card-primary">
+                  <svg class="github-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>Visualizar projeto</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <span class="project-status-note">1º C Raphael 🌸</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 3: Sabrina Carpenter -->
+          <article class="project-card reveal" data-delay="300">
+            <div class="project-image-box">
+              <img src="img/project-mariatrabalho.svg" alt="Prévia visual do Projeto Sabrina Carpenter"
+                class="project-thumb" loading="lazy">
+              <div class="project-overlay-badge badge-future">
+                <span class="badge-dot dot-pink"></span>
+                <span>Turma 1ºC • Informática</span>
+              </div>
+            </div>
+
+            <div class="project-details">
+              <div class="project-tags">
+                <span class="tech-tag">HTML5 Semântico</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Lógica Web</span>
+                <span class="tech-tag">Prática Acadêmica</span>
+              </div>
+
+              <h3 class="project-title">Sabrina Carpenter</h3>
+
+              <p class="project-description">
+                Atividade acadêmica prática desenvolvida no 1º ano do curso técnico de Informática no Instituto Educacional Raphael Di Santo, aplicando fundamentos de marcação semântica, responsividade e lógica web.
+              </p>
+
+              <div class="project-footer-actions">
+                <a href="https://github.com/mariaeduardafortes1234/mariatrabalho1c" target="_blank" rel="noopener noreferrer" class="btn btn-card-primary">
+                  <svg class="github-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                  <span>Visualizar projeto</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <span class="project-status-note">Prática Web ✨</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Banner com Instrução Clara para Maria Adicionar Mais Projetos -->
+        <div class="add-project-banner reveal">
+          <div class="banner-flower">🌸</div>
+          <div class="banner-text">
+            <strong>Deseja adicionar novos projetos?</strong>
+            <span>O código foi organizado de forma modular. Basta duplicar o bloco de projeto no arquivo
+              <code>index.html</code> ou editar a lista facilmente!</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SEÇÃO 5: CONTATO
+         ============================================== -->
+    <section class="section contact-section" id="contato">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="badge-pill">
+            <span class="badge-sparkle">✦</span>
+            <span>Vamos Conversar?</span>
+          </div>
+          <h2 class="section-title">
+            Entre em <span class="text-serif">Contato</span>
+          </h2>
+          <p class="section-subtitle">
+            Estou sempre aberta para novas conexões, oportunidades de aprendizado, estágios e troca de ideias na área de
+            tecnologia.
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+
+          <!-- Coluna 1: Cartões de Redes e Acesso Rápido -->
+          <div class="contact-cards-col reveal" data-delay="100">
+
+            <!-- Cartão LinkedIn Oficial -->
+            <a href="https://www.linkedin.com/in/maria-eduarda-fortes-de-brito-colegio-raphael-di-santo-b2a0b53b5/"
+              target="_blank" rel="noopener noreferrer" class="contact-channel-card linkedin-card">
+              <div class="channel-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-label">Conecte-se comigo no LinkedIn</span>
+                <strong class="channel-title">Maria Eduarda Fortes de Brito</strong>
+                <span class="channel-sub">Instituto Educacional Raphael Di Santo</span>
+              </div>
+              <div class="channel-action-arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+            </a>
+
+            <!-- Cartão GitHub -->
+            <a href="https://github.com/dudafortesb" target="_blank" rel="noopener noreferrer"
+              class="contact-channel-card github-card" id="github-link">
+              <div class="channel-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-label">Meu Espaço de Código</span>
+                <strong class="channel-title">GitHub de Maria Eduarda</strong>
+                <span class="channel-sub">Repositórios e projetos futuros</span>
+              </div>
+              <div class="channel-action-arrow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+            </a>
+
+            <!-- Cartão de Localização & Cidade -->
+            <div class="contact-channel-card location-card">
+              <div class="channel-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FB6F92" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <span class="channel-label">Localização</span>
+                <strong class="channel-title">Campinas, São Paulo - Brasil</strong>
+                <span class="channel-sub">Disponível para estágios presenciais ou remotos</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Coluna 2: Formulário de Mensagem Direta Delicado -->
+          <div class="contact-form-wrapper reveal" data-delay="200">
+            <div class="contact-form-card">
+
+              <div class="form-card-header">
+                <h3 class="form-title">Envie uma mensagem 🌸</h3>
+                <p class="form-subtitle">Preencha os campos abaixo para conversar comigo!</p>
+              </div>
+
+              <form id="contact-form" class="contact-form" novalidate>
+
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Seu Nome</label>
+                  <div class="input-wrapper">
+                    <input type="text" id="contact-name" name="name" class="form-input"
+                      placeholder="Como posso te chamar?" required>
+                    <span class="input-icon">👤</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Seu E-mail</label>
+                  <div class="input-wrapper">
+                    <input type="email" id="contact-email" name="email" class="form-input"
+                      placeholder="exemplo@email.com" required>
+                    <span class="input-icon">💌</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Sua Mensagem</label>
+                  <div class="input-wrapper">
+                    <textarea id="contact-message" name="message" class="form-textarea" rows="4"
+                      placeholder="Escreva sua mensagem, proposta ou feedback..." required></textarea>
+                    <span class="input-icon textarea-icon">✨</span>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+                  <span>Enviar Mensagem ✦</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================
+       RODAPÉ (FOOTER)
+       ============================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">Maria Eduarda 🌸</span>
+          <p class="footer-desc">
+            Estudante do curso técnico de Informática no Instituto Educacional Raphael Di Santo. Desenvolvendo com amor,
+            sensibilidade e tecnologia em Campinas, SP.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-title">Navegação</h4>
+          <ul class="footer-links-list">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-nav-title">Redes &amp; Conexão</h4>
+          <ul class="footer-links-list">
+            <li>
+              <a href="https://www.linkedin.com/in/maria-eduarda-fortes-de-brito-colegio-raphael-di-santo-b2a0b53b5/"
+                target="_blank" rel="noopener noreferrer">
+                LinkedIn ✦
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/dudafortesb" target="_blank" rel="noopener noreferrer">
+                GitHub ✦
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="current-year"></span> <strong>Maria Eduarda</strong>. Todos os direitos reservados.
+        </p>
+        <p class="footer-heart">
+          Feito com delicadeza &amp; código 💖
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante Voltar ao Topo -->
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao início da página">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+    <span class="back-to-top-tooltip">Subir</span>
+  </button>
+
+  <!-- Notificação Toast Elegante -->
+  <div class="toast-notification" id="toast-notification" role="alert" aria-live="polite">
+    <span class="toast-icon">🌸</span>
+    <span class="toast-message" id="toast-message">Mensagem enviada com carinho!</span>
+  </div>
+
+  <!-- Script Principal -->
+  <script src="script.js"></script>
+</body>
+
+</html>

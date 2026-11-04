@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="luanBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE5EC"/>
+      <stop offset="50%" stop-color="#FFF0F3"/>
+      <stop offset="100%" stop-color="#FFC2D1"/>
+    </linearGradient>
+    <linearGradient id="luanRose" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF8FAB"/>
+      <stop offset="100%" stop-color="#FB6F92"/>
+    </linearGradient>
+    <linearGradient id="luanDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D2430"/>
+      <stop offset="100%" stop-color="#24161E"/>
+    </linearGradient>
+    <filter id="luanShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#FB6F92" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="380" rx="28" fill="url(#luanBg)"/>
+
+  <!-- Decorative Background Elements -->
+  <g opacity="0.3" stroke="#FB6F92" stroke-width="1.5" fill="none">
+    <circle cx="530" cy="70" r="45" stroke-dasharray="4 4"/>
+    <circle cx="70" cy="310" r="35" stroke-dasharray="3 3"/>
+  </g>
+
+  <!-- Main Window Card Mockup -->
+  <g transform="translate(45, 38)" filter="url(#luanShadow)">
+    <rect width="510" height="304" rx="20" fill="#FFFFFF" stroke="#FFB3C6" stroke-width="1.5"/>
+
+    <!-- Window Top Bar -->
+    <path d="M 0 20 C 0 8.95 8.95 0 20 0 L 490 0 C 501.05 0 510 8.95 510 20 L 510 44 L 0 44 Z" fill="#FFE5EC"/>
+    <circle cx="25" cy="22" r="5" fill="#FB6F92"/>
+    <circle cx="42" cy="22" r="5" fill="#FF8FAB"/>
+    <circle cx="59" cy="22" r="5" fill="#FFC2D1"/>
+    <rect x="85" y="11" width="340" height="22" rx="11" fill="#FFFFFF" stroke="#FFC2D1" stroke-width="1"/>
+    <text x="255" y="26" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#FB6F92" text-anchor="middle" font-weight="600">github.com/dudafortesb/luan- 🌸</text>
+
+    <!-- Content Area: Modern Interactive Web Mockup -->
+    <g transform="translate(25, 62)">
+      <!-- Left Hero Box -->
+      <rect x="0" y="0" width="260" height="215" rx="14" fill="#FFF8F9" stroke="#FFE5EC" stroke-width="1.2"/>
+      
+      <!-- Pill Badge -->
+      <rect x="18" y="18" width="135" height="22" rx="11" fill="#FFE5EC"/>
+      <text x="85" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="bold" fill="#FB6F92" text-anchor="middle">✦ PROJETO AUTORAL</text>
+
+      <text x="18" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#2E1C24">Projeto Luan</text>
+      <text x="18" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#6E5662">Interface web delicada &amp; interativa</text>
+      
+      <!-- Decorative Hearts / Sparkles -->
+      <g transform="translate(18, 115)">
+        <rect width="224" height="42" rx="10" fill="#FFFFFF" stroke="#FFC2D1" stroke-width="1"/>
+        <text x="14" y="25" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#FB6F92">&lt;design /&gt; HTML • CSS • JS</text>
+      </g>
+
+      <!-- Action Button Mockup -->
+      <rect x="18" y="170" width="115" height="30" rx="15" fill="url(#luanRose)"/>
+      <text x="75" y="189" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Explorar Repo 🌸</text>
+
+      <!-- Right Side: Code & Graphic Panel -->
+      <g transform="translate(275, 0)">
+        <rect width="185" height="215" rx="14" fill="url(#luanDark)"/>
+        
+        <!-- Editor Header -->
+        <rect width="185" height="28" rx="14" fill="#291822"/>
+        <text x="14" y="18" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FF8FAB">index.html • style.css</text>
+
+        <!-- Code Lines -->
+        <text x="14" y="52" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FF8FAB">&lt;section <tspan fill="#FFE5EC">class="luan"</tspan>&gt;</text>
+        <text x="24" y="72" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FFC2D1">&lt;h1&gt;Projeto Luan&lt;/h1&gt;</text>
+        <text x="24" y="92" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FB6F92">&lt;p&gt;Criado com amor&lt;/p&gt;</text>
+        <text x="14" y="112" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FF8FAB">&lt;/section&gt;</text>
+
+        <!-- Heart graphic inside editor -->
+        <g transform="translate(92, 160)">
+          <circle cx="0" cy="0" r="28" fill="rgba(251, 111, 146, 0.2)"/>
+          <path d="M 0 -8 C -10 -20 -24 -2 0 16 C 24 -2 10 -20 0 -8 Z" fill="url(#luanRose)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+

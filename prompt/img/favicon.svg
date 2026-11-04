@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="blossomGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB3C6" />
+      <stop offset="50%" stop-color="#FF8FAB" />
+      <stop offset="100%" stop-color="#FB6F92" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#FB6F92" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  
+  <rect width="64" height="64" rx="18" fill="#FFE5EC" />
+  
+  <g transform="translate(32, 32)" filter="url(#softGlow)">
+    <!-- Petals -->
+    <path d="M 0 -6 C -8 -20, 8 -20, 0 -6" fill="url(#blossomGrad)" transform="rotate(0)" />
+    <path d="M 0 -6 C -8 -20, 8 -20, 0 -6" fill="url(#blossomGrad)" transform="rotate(72)" />
+    <path d="M 0 -6 C -8 -20, 8 -20, 0 -6" fill="url(#blossomGrad)" transform="rotate(144)" />
+    <path d="M 0 -6 C -8 -20, 8 -20, 0 -6" fill="url(#blossomGrad)" transform="rotate(216)" />
+    <path d="M 0 -6 C -8 -20, 8 -20, 0 -6" fill="url(#blossomGrad)" transform="rotate(288)" />
+    
+    <!-- Flower Center -->
+    <circle cx="0" cy="0" r="4.5" fill="#FFF0F3" stroke="#FF8FAB" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="2" fill="#FB6F92" />
+  </g>
+</svg>
+

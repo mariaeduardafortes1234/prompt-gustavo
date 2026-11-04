@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skinsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE5EC"/>
+      <stop offset="50%" stop-color="#FFF0F3"/>
+      <stop offset="100%" stop-color="#FFC2D1"/>
+    </linearGradient>
+    <linearGradient id="skinsRose" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF8FAB"/>
+      <stop offset="100%" stop-color="#FB6F92"/>
+    </linearGradient>
+    <linearGradient id="skinsCardDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1D25"/>
+      <stop offset="100%" stop-color="#1A1016"/>
+    </linearGradient>
+    <filter id="skinsShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#FB6F92" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="380" rx="28" fill="url(#skinsBg)"/>
+
+  <!-- Browser Window Mockup -->
+  <g transform="translate(45, 38)" filter="url(#skinsShadow)">
+    <rect width="510" height="304" rx="20" fill="#FFFFFF" stroke="#FFB3C6" stroke-width="1.5"/>
+
+    <!-- Top Window Bar -->
+    <path d="M 0 20 C 0 8.95 8.95 0 20 0 L 490 0 C 501.05 0 510 8.95 510 20 L 510 44 L 0 44 Z" fill="#FFE5EC"/>
+    <circle cx="25" cy="22" r="5" fill="#FB6F92"/>
+    <circle cx="42" cy="22" r="5" fill="#FF8FAB"/>
+    <circle cx="59" cy="22" r="5" fill="#FFC2D1"/>
+    <rect x="85" y="11" width="340" height="22" rx="11" fill="#FFFFFF" stroke="#FFC2D1" stroke-width="1"/>
+    <text x="255" y="26" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#FB6F92" text-anchor="middle" font-weight="600">github.com/dudafortesb/skins-web 🎮</text>
+
+    <!-- Content: Skins Store / Web Catalog -->
+    <g transform="translate(24, 60)">
+      
+      <!-- Store Header Mock -->
+      <text x="0" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#2E1C24">Skins Web ✦ <tspan fill="#FB6F92">Game Store</tspan></text>
+      <rect x="360" y="2" width="100" height="22" rx="11" fill="#FFE5EC"/>
+      <text x="410" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="bold" fill="#FB6F92" text-anchor="middle">CATÁLOGO ONLINE</text>
+
+      <!-- Grid of Skins Cards -->
+      <g transform="translate(0, 32)">
+        <!-- Skin Card 1 (Featured) -->
+        <rect x="0" y="0" width="220" height="190" rx="14" fill="url(#skinsCardDark)"/>
+        
+        <!-- Glow Badge -->
+        <rect x="14" y="14" width="75" height="18" rx="9" fill="rgba(251, 111, 146, 0.3)"/>
+        <text x="51" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="bold" fill="#FF8FAB" text-anchor="middle">SKIN RARA ✦</text>
+
+        <!-- Weapon / Skin Visual Representation -->
+        <g transform="translate(110, 75)">
+          <ellipse cx="0" cy="0" rx="65" ry="32" fill="rgba(251, 111, 146, 0.15)"/>
+          <!-- Stylized Cyber Weapon Silhouette -->
+          <path d="M -50 0 L -15 -8 L 25 -8 L 50 -3 L 55 5 L 15 8 L -10 16 L -25 16 L -30 6 L -50 4 Z" fill="url(#skinsRose)"/>
+          <circle cx="25" cy="-2" r="3" fill="#FFFFFF"/>
+          <line x1="-15" y1="2" x2="35" y2="2" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+        </g>
+
+        <!-- Skin Name & Details -->
+        <text x="14" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">AK-47 | Jardim Tóxico</text>
+        <text x="14" y="146" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#FFB3C6">Grau Classificado • Pouco Usada</text>
+
+        <rect x="14" y="156" width="192" height="24" rx="6" fill="rgba(255, 255, 255, 0.1)"/>
+        <text x="24" y="172" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#2ECC71">R$ 149,90</text>
+        <text x="195" y="172" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="bold" fill="#FF8FAB" text-anchor="end">Ver Item ↗</text>
+
+        <!-- Skin Card 2 -->
+        <g transform="translate(235, 0)">
+          <rect x="0" y="0" width="225" height="90" rx="12" fill="#FFF8F9" stroke="#FFE5EC" stroke-width="1"/>
+          <circle cx="35" cy="45" r="22" fill="#FFE5EC"/>
+          <text x="35" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" text-anchor="middle">🎯</text>
+          <text x="70" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#2E1C24">AWP | Asiimov Neo</text>
+          <text x="70" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#6E5662">Visualização 3D e Galeria</text>
+          <text x="70" y="70" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#FB6F92">R$ 380,00</text>
+        </g>
+
+        <!-- Skin Card 3 -->
+        <g transform="translate(235, 100)">
+          <rect x="0" y="0" width="225" height="90" rx="12" fill="#FFF8F9" stroke="#FFE5EC" stroke-width="1"/>
+          <circle cx="35" cy="45" r="22" fill="#FFE5EC"/>
+          <text x="35" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" text-anchor="middle">🗡️</text>
+          <text x="70" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#2E1C24">Faca Karambit Fade</text>
+          <text x="70" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#6E5662">Interface Responsiva &amp; Carrinho</text>
+          <text x="70" y="70" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#FB6F92">R$ 1.250,00</text>
+        </g>
+
+      </g>
+    </g>
+  </g>
+</svg>
+

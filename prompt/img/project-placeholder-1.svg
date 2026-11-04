@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F3"/>
+      <stop offset="100%" stop-color="#FFE5EC"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8FAB"/>
+      <stop offset="100%" stop-color="#FB6F92"/>
+    </linearGradient>
+    <filter id="cShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#FB6F92" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="380" rx="24" fill="url(#cGrad)"/>
+
+  <!-- Technical Code / Academic Project Mockup Window -->
+  <g transform="translate(45, 40)" filter="url(#cShadow)">
+    <rect width="510" height="300" rx="18" fill="#FFFFFF" stroke="#FFC2D1" stroke-width="1.5"/>
+
+    <!-- Header bar -->
+    <path d="M 0 18 C 0 8 8 0 18 0 L 492 0 C 502 0 510 8 510 18 L 510 44 L 0 44 Z" fill="#FFE5EC"/>
+    <circle cx="25" cy="22" r="5" fill="#FB6F92"/>
+    <circle cx="42" cy="22" r="5" fill="#FF8FAB"/>
+    <circle cx="59" cy="22" r="5" fill="#FFC2D1"/>
+    <text x="255" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#6E5662" text-anchor="middle">Instituto Educacional Raphael Di Santo • Informática</text>
+
+    <!-- Side navigation mock -->
+    <rect x="0" y="44" width="120" height="256" fill="#FFF9FA"/>
+    <line x1="120" y1="44" x2="120" y2="300" stroke="#FFE5EC" stroke-width="1"/>
+    
+    <rect x="15" y="65" width="85" height="12" rx="6" fill="#FFC2D1"/>
+    <rect x="15" y="88" width="70" height="10" rx="5" fill="#FFE5EC"/>
+    <rect x="15" y="108" width="75" height="10" rx="5" fill="#FFE5EC"/>
+    <rect x="15" y="128" width="60" height="10" rx="5" fill="#FFE5EC"/>
+    <rect x="15" y="148" width="80" height="10" rx="5" fill="#FFE5EC"/>
+
+    <!-- Main Content Area -->
+    <g transform="translate(145, 65)">
+      <!-- Badge -->
+      <rect x="0" y="0" width="150" height="22" rx="11" fill="#FFE5EC"/>
+      <text x="75" y="14" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="bold" fill="#FB6F92" text-anchor="middle">PROJETO TÉCNICO • PRÁTICA</text>
+
+      <text x="0" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="bold" fill="#2E1C24">Laboratório &amp; Algoritmos</text>
+      <text x="0" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#6E5662">Desenvolvimento prático e lógica de programação.</text>
+
+      <!-- Code editor box -->
+      <rect x="0" y="90" width="335" height="120" rx="10" fill="#2E1C24"/>
+      
+      <text x="15" y="115" font-family="'JetBrains Mono', monospace" font-size="10" fill="#FF8FAB">function</text>
+      <text x="75" y="115" font-family="'JetBrains Mono', monospace" font-size="10" fill="#FFF0F3">construirFuturo() {</text>
+      <text x="30" y="135" font-family="'JetBrains Mono', monospace" font-size="10" fill="#FFC2D1">const dedicacao = true;</text>
+      <text x="30" y="155" font-family="'JetBrains Mono', monospace" font-size="10" fill="#FFB3C6">const escola = "Raphael Di Santo";</text>
+      <text x="30" y="175" font-family="'JetBrains Mono', monospace" font-size="10" fill="#FB6F92">return "Aprendizado em evolução 🌸";</text>
+      <text x="15" y="195" font-family="'JetBrains Mono', monospace" font-size="10" fill="#FFF0F3">}</text>
+    </g>
+  </g>
+</svg>
+

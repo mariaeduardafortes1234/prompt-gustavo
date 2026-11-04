@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE5EC"/>
+      <stop offset="50%" stop-color="#FFF5F7"/>
+      <stop offset="100%" stop-color="#FFB3C6"/>
+    </linearGradient>
+    <linearGradient id="mtRose" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF8FAB"/>
+      <stop offset="100%" stop-color="#FB6F92"/>
+    </linearGradient>
+    <linearGradient id="codeDarkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1C24"/>
+      <stop offset="100%" stop-color="#1E1218"/>
+    </linearGradient>
+    <filter id="mtShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#FB6F92" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="380" rx="28" fill="url(#mtBg)"/>
+
+  <!-- Code & Web Split Mockup Window -->
+  <g transform="translate(45, 38)" filter="url(#mtShadow)">
+    <rect width="510" height="304" rx="20" fill="#FFFFFF" stroke="#FFB3C6" stroke-width="1.5"/>
+
+    <!-- Window Top Header -->
+    <path d="M 0 20 C 0 8.95 8.95 0 20 0 L 490 0 C 501.05 0 510 8.95 510 20 L 510 44 L 0 44 Z" fill="#FFE5EC"/>
+    <circle cx="25" cy="22" r="5" fill="#FB6F92"/>
+    <circle cx="42" cy="22" r="5" fill="#FF8FAB"/>
+    <circle cx="59" cy="22" r="5" fill="#FFC2D1"/>
+    <rect x="85" y="11" width="340" height="22" rx="11" fill="#FFFFFF" stroke="#FFC2D1" stroke-width="1"/>
+    <text x="255" y="26" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#FB6F92" text-anchor="middle" font-weight="600">github.com/mariaeduardafortes1234/mariatrabalho1c</text>
+
+    <!-- Split Screen: Left Code, Right Live Web Preview -->
+    <g transform="translate(20, 60)">
+      
+      <!-- Left Panel: Code Editor -->
+      <rect x="0" y="0" width="230" height="220" rx="12" fill="url(#codeDarkBg)"/>
+      <rect x="0" y="0" width="230" height="26" rx="12" fill="#24141C"/>
+      <circle cx="16" cy="13" r="3.5" fill="#FB6F92"/>
+      <text x="30" y="17" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FFC2D1">trabalho1c.html</text>
+
+      <g transform="translate(14, 46)">
+        <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#FF8FAB">&lt;!DOCTYPE <tspan fill="#FFE5EC">html</tspan>&gt;</text>
+        <text x="0" y="18" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#FF8FAB">&lt;html <tspan fill="#FFE5EC">lang="pt-BR"</tspan>&gt;</text>
+        <text x="10" y="36" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#FFC2D1">&lt;head&gt; &lt;meta ...&gt; &lt;/head&gt;</text>
+        <text x="10" y="54" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#FB6F92">&lt;body <tspan fill="#FFE5EC">class="escola"</tspan>&gt;</text>
+        <text x="20" y="72" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#FFF0F3">&lt;h1&gt;Prática 1C&lt;/h1&gt;</text>
+        <text x="20" y="90" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#FF8FAB">&lt;div <tspan fill="#FFE5EC">class="card"</tspan>&gt;...&lt;/div&gt;</text>
+        <text x="10" y="108" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#FB6F92">&lt;/body&gt;</text>
+        <text x="0" y="126" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#FF8FAB">&lt;/html&gt;</text>
+        
+        <rect x="0" y="140" width="160" height="18" rx="9" fill="rgba(251, 111, 146, 0.25)"/>
+        <text x="10" y="153" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#FFB3C6">Raphael Di Santo • 1C</text>
+      </g>
+
+      <!-- Right Panel: Live Render Preview -->
+      <g transform="translate(245, 0)">
+        <rect x="0" y="0" width="225" height="220" rx="12" fill="#FFF9FA" stroke="#FFE5EC" stroke-width="1.2"/>
+        
+        <!-- Live Window Mini Header -->
+        <rect x="0" y="0" width="225" height="24" rx="12" fill="#FFE5EC"/>
+        <text x="15" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="bold" fill="#FB6F92">🌐 Preview Web da Aluna</text>
+
+        <!-- Preview UI Elements -->
+        <g transform="translate(16, 40)">
+          <rect x="0" y="0" width="90" height="16" rx="8" fill="#FFE5EC"/>
+          <text x="45" y="11" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="bold" fill="#FB6F92" text-anchor="middle">ATIVIDADE 1C</text>
+
+          <text x="0" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#2E1C24">Trabalho Prático</text>
+          <text x="0" y="54" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#6E5662">HTML, CSS &amp; Estruturação Web</text>
+
+          <rect x="0" y="70" width="193" height="34" rx="8" fill="#FFFFFF" stroke="#FFC2D1" stroke-width="1"/>
+          <circle cx="18" cy="87" r="8" fill="#FFE5EC"/>
+          <text x="18" y="90" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" text-anchor="middle">🌸</text>
+          <text x="35" y="86" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="bold" fill="#2E1C24">Maria Eduarda Fortes</text>
+          <text x="35" y="97" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#FB6F92">Turma 1º C • Informática</text>
+
+          <rect x="0" y="118" width="110" height="26" rx="13" fill="url(#mtRose)"/>
+          <text x="55" y="135" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Ver Código ↗</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glpiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F3"/>
+      <stop offset="50%" stop-color="#FFE5EC"/>
+      <stop offset="100%" stop-color="#FFC2D1"/>
+    </linearGradient>
+    <linearGradient id="glpiRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8FAB"/>
+      <stop offset="100%" stop-color="#FB6F92"/>
+    </linearGradient>
+    <filter id="glpiShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#FB6F92" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="380" rx="28" fill="url(#glpiBg)"/>
+
+  <!-- Main System Window Mockup -->
+  <g transform="translate(45, 38)" filter="url(#glpiShadow)">
+    <rect width="510" height="304" rx="20" fill="#FFFFFF" stroke="#FFC2D1" stroke-width="1.5"/>
+
+    <!-- Window Header -->
+    <path d="M 0 20 C 0 8.95 8.95 0 20 0 L 490 0 C 501.05 0 510 8.95 510 20 L 510 44 L 0 44 Z" fill="#FFE5EC"/>
+    <circle cx="25" cy="22" r="5" fill="#FB6F92"/>
+    <circle cx="42" cy="22" r="5" fill="#FF8FAB"/>
+    <circle cx="59" cy="22" r="5" fill="#FFC2D1"/>
+    <rect x="85" y="11" width="340" height="22" rx="11" fill="#FFFFFF" stroke="#FFC2D1" stroke-width="1"/>
+    <text x="255" y="26" font-family="'JetBrains Mono', monospace" font-size="10" fill="#FB6F92" text-anchor="middle" font-weight="600">github.com/mariaeduardafortes1234/GLPI-MARIA-EDUARDA-1C</text>
+
+    <!-- Sidebar & Dashboard Grid -->
+    <g transform="translate(0, 44)">
+      <!-- Sidebar -->
+      <rect x="0" y="0" width="130" height="260" rx="0" fill="#FFF9FA"/>
+      <line x1="130" y1="0" x2="130" y2="260" stroke="#FFE5EC" stroke-width="1.2"/>
+
+      <!-- Sidebar Items -->
+      <g transform="translate(14, 18)">
+        <rect x="0" y="0" width="102" height="28" rx="8" fill="#FFE5EC"/>
+        <text x="12" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#FB6F92">📊 Dashboard</text>
+
+        <rect x="0" y="38" width="102" height="24" rx="8" fill="transparent"/>
+        <text x="12" y="54" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#6E5662">🎫 Chamados</text>
+
+        <rect x="0" y="68" width="102" height="24" rx="8" fill="transparent"/>
+        <text x="12" y="84" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#6E5662">💻 Ativos &amp; TI</text>
+
+        <rect x="0" y="98" width="102" height="24" rx="8" fill="transparent"/>
+        <text x="12" y="114" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#6E5662">👥 1C Raphael</text>
+      </g>
+
+      <!-- Main Dashboard Area -->
+      <g transform="translate(145, 18)">
+        <!-- Stat Cards Row -->
+        <rect x="0" y="0" width="105" height="60" rx="10" fill="#FFF5F7" stroke="#FFE5EC" stroke-width="1"/>
+        <text x="12" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#6E5662">Ativos de TI</text>
+        <text x="12" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="800" fill="#FB6F92">142</text>
+
+        <rect x="118" y="0" width="105" height="60" rx="10" fill="#FFF5F7" stroke="#FFE5EC" stroke-width="1"/>
+        <text x="12" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#6E5662" transform="translate(118, 0)">Atendimento</text>
+        <text x="12" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="800" fill="#2ECC71" transform="translate(118, 0)">100%</text>
+
+        <rect x="236" y="0" width="112" height="60" rx="10" fill="#FFE5EC" stroke="#FFC2D1" stroke-width="1"/>
+        <text x="10" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="bold" fill="#FB6F92" transform="translate(236, 0)">GLPI Maria Eduarda</text>
+        <text x="10" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#2E1C24" transform="translate(236, 0)">Turma 1º C 🌸</text>
+
+        <!-- Service Desk Tickets Table Mockup -->
+        <g transform="translate(0, 75)">
+          <rect x="0" y="0" width="348" height="150" rx="10" fill="#FFFFFF" stroke="#FFE5EC" stroke-width="1"/>
+          
+          <rect x="0" y="0" width="348" height="28" rx="10" fill="#FFF8F9"/>
+          <text x="14" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="bold" fill="#2E1C24">CHAMADO / ATIVO</text>
+          <text x="150" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="bold" fill="#2E1C24">ALUNA / RESP.</text>
+          <text x="260" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="bold" fill="#2E1C24">STATUS</text>
+
+          <!-- Row 1 -->
+          <line x1="0" y1="28" x2="348" y2="28" stroke="#FFE5EC" stroke-width="1"/>
+          <text x="14" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#2E1C24">Gestão de Inventário GLPI</text>
+          <text x="150" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#FB6F92" font-weight="600">Maria Eduarda</text>
+          <rect x="256" y="38" width="76" height="16" rx="8" fill="#E8F8F0"/>
+          <text x="294" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="bold" fill="#27AE60" text-anchor="middle">Ativo</text>
+
+          <!-- Row 2 -->
+          <line x1="0" y1="65" x2="348" y2="65" stroke="#FFE5EC" stroke-width="1"/>
+          <text x="14" y="85" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#2E1C24">Laboratório 1C Raphael Di Santo</text>
+          <text x="150" y="85" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#FB6F92" font-weight="600">Turma 1C</text>
+          <rect x="256" y="75" width="76" height="16" rx="8" fill="#FFE5EC"/>
+          <text x="294" y="87" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="bold" fill="#FB6F92" text-anchor="middle">Validado ✦</text>
+
+          <!-- Row 3 -->
+          <line x1="0" y1="102" x2="348" y2="102" stroke="#FFE5EC" stroke-width="1"/>
+          <text x="14" y="122" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#2E1C24">Configuração Service Desk</text>
+          <text x="150" y="122" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#FB6F92" font-weight="600">Help Desk TI</text>
+          <rect x="256" y="112" width="76" height="16" rx="8" fill="#E8F8F0"/>
+          <text x="294" y="124" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="bold" fill="#27AE60" text-anchor="middle">Concluído</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

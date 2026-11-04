@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de Fundo Pastel -->
+    <linearGradient id="bonecoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE5EC"/>
+      <stop offset="50%" stop-color="#FFF0F3"/>
+      <stop offset="100%" stop-color="#FFC2D1"/>
+    </linearGradient>
+
+    <!-- Gradiente do Boneco Rosa -->
+    <linearGradient id="bonecoRosaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8FAB"/>
+      <stop offset="100%" stop-color="#FB6F92"/>
+    </linearGradient>
+
+    <!-- Gradiente Suave para Destaques -->
+    <linearGradient id="bonecoSoftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC2D1"/>
+      <stop offset="100%" stop-color="#FFB3C6"/>
+    </linearGradient>
+
+    <filter id="bonecoShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#FB6F92" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo com Cantos Arredondados -->
+  <rect width="400" height="480" rx="36" fill="url(#bonecoBgGrad)"/>
+
+  <!-- Círculo de Fundo Suave / Halo -->
+  <circle cx="200" cy="235" r="145" fill="#FFFFFF" opacity="0.65"/>
+  <circle cx="200" cy="235" r="125" fill="#FFE5EC" opacity="0.5"/>
+
+  <!-- Detalhes Sutis de Brilho / Sparkles -->
+  <g fill="#FB6F92" opacity="0.6">
+    <path d="M 85 110 Q 85 120 75 120 Q 85 120 85 130 Q 85 120 95 120 Q 85 120 85 110" />
+    <path d="M 315 130 Q 315 140 305 140 Q 315 140 315 150 Q 315 140 325 140 Q 315 140 315 130" />
+    <circle cx="310" cy="280" r="4.5" fill="#FF8FAB"/>
+    <circle cx="90" cy="290" r="4" fill="#FFB3C6"/>
+  </g>
+
+  <!-- O Boneco Rosa (Silhueta Minimalista e Elegante) -->
+  <g transform="translate(200, 240)" filter="url(#bonecoShadow)">
+    
+    <!-- Cabeça do Boneco -->
+    <circle cx="0" cy="-60" r="54" fill="url(#bonecoRosaGrad)"/>
+    
+    <!-- Brilho delicado na cabeça -->
+    <path d="M -24 -92 A 40 40 0 0 1 20 -92" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.45"/>
+
+    <!-- Corpo / Ombros do Boneco -->
+    <path d="M -95 135 C -95 62 -52 15 0 15 C 52 15 95 62 95 135 Z" fill="url(#bonecoRosaGrad)"/>
+
+    <!-- Detalhe de Luz suave no torso -->
+    <path d="M -50 135 C -50 78 -28 42 0 42 C 28 42 50 78 50 135 Z" fill="url(#bonecoSoftGrad)" opacity="0.35"/>
+
+    <!-- Florzinha Delicada no Peito do Boneco -->
+    <g transform="translate(0, 75)">
+      <circle cx="0" cy="0" r="7" fill="#FFFFFF" opacity="0.9"/>
+      <circle cx="0" cy="0" r="4" fill="#FB6F92"/>
+    </g>
+  </g>
+
+</svg>
+
